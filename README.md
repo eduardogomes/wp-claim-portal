@@ -30,6 +30,6 @@ Obtain an access token and add them to the environment variable `PAGE_ACCESS_TOK
 
 ### Load your employee data on the Postgres `employee` table. 
 
-[Export your provisioned employees](https://work.workplace.com/help/work/1858663031075098) from Workplace.
+[Export your provisioned employees](https://work.workplace.com/help/work/1858663031075098) from Workplace. This claim portal only support users [provisioned with access codes](https://work.workplace.com/help/work/546217199128952). 
 
 Populate the `employees` Postgres table with the information provisioned to Workplace (`id` and `employee_id`) and the secrets your company shares with the employee (`answer1` and `answer2`). These secrets will be used to confirm an employee identity before providing them an access code.
