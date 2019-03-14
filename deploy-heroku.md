@@ -53,7 +53,7 @@
 10. Set your enviroment variables according to the values set on the Workplace integration
 
     ```
-    heroku config:set PAGE_ACCESS_TOKEN=<value for Access Token, 2 on image above>
+    heroku config:set PAGE_ACCESS_TOKEN=Bearer <value for Access Token>
     ```
 
 
