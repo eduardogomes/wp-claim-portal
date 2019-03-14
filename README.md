@@ -8,7 +8,7 @@ A Claim Portal is a simple web page that e-mailless users can access to confirm 
 
 This portal uses a Postgres database for storing the security questions. To use the portal, create a database table with the following fields:
 
-* `id` (biginy) - The Workplace User ID
+* `id` (bigint) - The Workplace User ID
 * `employee_id` (text) - The Employee known ID 
 * `answer1` (text) - A secret both the company and the employee know (e.g.: personal document number)
 * `answer2` (text) - A second secret both the company and the employee know (e.g.: mother's name)
