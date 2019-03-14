@@ -40,7 +40,7 @@
 8. Connect to the database and create the required table.
     ```
     heroku pg:psql -a <application name>
-    <application name>::CREATE TABLE employees(id bigint PRIMARY KEY, employee_id VARCHAR (50) UNIQUE NOT NULL, answer1 VARCHAR (50) NOT NULL,answer2 VARCHAR (50) NOT NULL); 
+    <application name>::DATABASE=> CREATE TABLE employees(id bigint PRIMARY KEY, employee_id VARCHAR (50) UNIQUE NOT NULL, answer1 VARCHAR (50) NOT NULL,answer2 VARCHAR (50) NOT NULL); 
     ```
     You can exit the psql application using Control(^)+D
 
@@ -53,10 +53,14 @@
 10. Set your enviroment variables according to the values set on the Workplace integration
 
     ```
-    heroku config:set PAGE_ACCESS_TOKEN=Bearer <value for Access Token>
+    heroku config:set PAGE_ACCESS_TOKEN="Bearer <value for Access Token>"
     ```
 
 
 11. You should now be able to acces the claim portal at https://<application name,  e.g.: mystic-wind-83>.herokuapp.com
 
 12. Connect to your Postgres database and add any employees to the `employees` table.
+    ```
+    heroku pg:psql -a <application name>
+    <application name>::DATABASE=> ::DATABASE=> INSERT INTO employees VALUES (100034734373321, 'cp002','bird', 'box');
+    ```
